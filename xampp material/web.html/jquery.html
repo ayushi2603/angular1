@@ -1,0 +1,95 @@
+<html>
+<head>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+$("tr:even").css({"background-color":"tomato","color":"white"})
+$("tr:odd").css({"background-color":"blue","color":"white"})
+
+
+$(".pc").click(function(){
+$(".pc").hide()
+})
+$("#p1").click(function(){
+			//$("p").hide()
+			//$(this).hide()
+			$("#p1").hide()
+		})
+		$("#b2").click(function(){
+			$("p.pc").hide()
+		})
+		
+		$("#b3").click(function(){
+			$("p:first").hide()
+		})
+		$("#hideall").click(function(){
+		$("*").hide()
+		})
+		$("#b4").click(function(){
+			$("ul li:last-child").hide()
+		})
+		$("#product").mouseenter(function(){
+			$("#c1").css({"width":"300", "height":"200" })
+		})
+		$("#product").mouseleave(function(){
+			$("#c1").css({"width":"100", "height":"100" })
+		})
+		$("#product1").hover(function(){
+			$("#c2").css({"width":"500", "height":"300" })
+		},
+		function(){
+			$("#c2").css({"width":"100", "height":"100" })
+		})
+})
+</script>
+</head>
+<table border="1" width="40%">
+<tr>
+<th>subjects</th>
+<th>marks</th>
+</tr>
+<tr>
+<th>maths</th>
+<th>100</th>
+</tr>
+<tr>
+<th>chemistry</th>
+<th>90</th>
+</tr>
+<tr>
+<th>physics</th>
+<th>85</th>
+</tr>
+</table>
+<div id="product">
+<figure><figcaption>flower1</figcaption>
+<img src="flower1.jpg" id="c1"/></figure>
+</div>
+<div  id="product1">
+<figure >
+<figcaption> flower2 </figcaption>
+<img id="c2" src="flower2.jpg" height="150px" width="150px" />
+</figure>
+</div>
+<p class="pc">hiii....i am learning jquery-1</p>
+<p id="p1">
+	Hey , I am learning Jquery... Ok got it...go away - 2 !!
+</p>
+<p class="pc">
+	Hey , I am learning Jquery... Ok got it...go away - 3 !!
+</p>
+<div id="b2">i am inside div tag</div>
+<ul>
+<li> subjects </li>
+<li> C++ </li>
+<li> Java </li>
+<li> AWP </li>
+<li> MeanStack </li>
+</ul>
+<br/>
+<button id = "b4"> Remove from list </button>
+<br/>
+<button id="hideall"> HideAll </button>
+<button id="b2" class="pc"> Hide P with class pc </button>
+<button id="b3"> Hide First P </button>
+</html>

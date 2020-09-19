@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+#showdetails,#displaydetails{
+padding:10px;
+text-align:center;
+background-color:gray;
+color:white;
+border: solid 1px red;
+}
+
+#displaydetails{
+
+height:300px;
+}
+</style>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("#c1").hide()
+})
+$("#btn2").click(function(){
+		$("#c1").show()
+	})
+
+)}
+</script>
+</head>
+<body>
+<button id="btn1">hide</button>
+<button id="btn2"> Show </button>
+<button id="btn3"> Hide/Show </button>
+<button id="btn4"> Fade-In </button>
+<button id="btn5"> Fade-Out </button>
+<button id="btn6"> Fade In/Out </button>
+<button id="btn7"> Animate </button>
+<hr/>
+<img id="c1" src="flower1.jpg" width="150px" height="150px" />
+<div id="showdetails"> Show Details </div>
+<div id="displaydetails">
+<img id="c1" src="flower1.jpg" width="150px" height="150px" />
+<img id="c1" src="flower1.jpg" />
+<div id="div2" style="position:absolute;padding:10px;width:130px;height:150px;background-color:red">
+</div>
+</div>
+
+</body>
+</html>

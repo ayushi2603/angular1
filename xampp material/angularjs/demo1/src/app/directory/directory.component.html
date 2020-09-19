@@ -1,0 +1,27 @@
+<p>directory works!</p>
+<div *ngIf="cond;then thenpart;else elsepart">hello everyone</div>
+<ng-template #thenpart>
+    this is then part
+</ng-template>
+<ng-template #elsepart>
+    this is elsepart
+</ng-template>
+<div *ngFor="let car of cars">
+    <h3>{{car}}</h3>
+</div>
+<ul *ngFor="let car of cars">
+    <li>{{car}}</li>
+</ul>
+<hr>
+<div [ngSwitch]="mychoice">
+    <div *ngSwitchCase="'BMW'">your choice is BMW</div>
+    <div *ngSwitchCase="'Farari'">your choice is farari</div>
+    <div *ngSwitchCase="'Balino'">your choice is Balino</div>
+    <div *ngSwitchCase="'Nano'">your choice is Nano</div>
+    <div *ngSwitchCase="'MiniCooper'">your choice is minicooper</div>
+    <div *ngSwitchDefault>invalid choice</div>
+</div>
+
+
+
+

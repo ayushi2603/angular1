@@ -1,0 +1,52 @@
+<html>
+<body>
+<script>
+/*function print()
+{
+document.write("<br>");
+for(i=0;i<20;i++)
+{
+document.write("*");
+}
+}
+print();*/
+function print1(displaychar,num)
+{
+document.write("<br>");
+for(var i=0;i<num;i++)
+{
+document.write(displaychar);
+}
+document.write("<br>");
+}
+print1('-',80);
+var cars=["BMW","VOLVO","MERCEDEZ","TOYOTA"]
+
+for(car of cars)
+{
+document.write("<br>");
+document.write(car);
+print1("#",80);
+}
+print1("@",80);
+function tickets()
+{
+for(i=1;i<=50;i++)
+{
+document.write("<br>");
+if(i%2==0)
+{
+document.write("even seats",i);
+}
+else
+{
+document.write("odd seats",i);
+}
+}
+}
+tickets();
+
+
+</script>
+</body>
+</html>

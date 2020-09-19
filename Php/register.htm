@@ -1,0 +1,163 @@
+<html>
+<head>
+<script>
+function valname(x)
+{
+//var uname = document.frmregister.txtuname.value;
+/*var uname = document.getElementById("txtuname").value;
+alert(uname);
+len = uname.length;*/
+if ((x.length) < 8)
+{
+alert ("Length should be more than 8 chars");
+uname = prompt ("enter new user name");
+document.frmregister.txtuname.value = uname;
+}
+chkname(x);
+}
+
+function validate()
+{
+	var upass = document.frmregister.txtpass.value;
+	if  (((upass.length) < 6 ) || (upass.indexOf("@") > -1))
+	{
+	alert ("Invalid Password")
+	return false;
+	}
+}
+function chkname(nm)
+{
+if (!isNaN(nm))
+{
+	mydiv = document.getElementById("error");
+	mydiv.innerHTML = "Only numbers not allowed";
+	return false;
+}
+}
+
+</script>
+</head>
+<body>
+	<!--onsubmit="return validate()" -->
+<form name="frmregister" 
+action="register.php" method="get">
+<table align="center" border="1" bgcolor="aqua" width="50%">
+<tr>
+<th colspan="2"> Registration Form </th>
+</tr>
+<tr>
+<td> Username </td>
+<td> <input type="Text" id="txtuname" name="txtuname" maxlength="12" 
+placeholder="enter user name" onblur="valname(this.value)"/> 
+<div id="error">
+</td>
+</tr>
+<tr>
+<td> Password </td>
+<td> <input type="Password" name="txtpass"  
+placeholder="enter password"/> 
+</td>
+</tr>
+<tr>
+<td> Email </td>
+<td> <input type="email" name="txemail"  
+placeholder="enter email"/> 
+</td>
+</tr>
+<tr>
+<td> Mobile </td>
+<td> <input type="number" name="txmobile"  
+placeholder="enter mobile"/> 
+</td>
+</tr>
+<tr>
+<td> Gender </td>
+<td> <input type="radio" name="rdogender" value="M"/> 
+Male 
+<input type="radio" name="rdogender" value="F"> 
+Female
+</td>
+</tr>
+<tr>
+<td> Education </td>
+<td> <input type="checkbox" name="chkedu[]" checked value="BE"/> 
+BE
+<input type="checkbox" name="chkedu[]" value="Diploma"> 
+Diploma
+<input type="checkbox" name="chkedu[]" value="MBA"/> 
+MBA
+<input type="checkbox" name="chkedu[]" Value="MSC"> 
+MSC
+<input type="checkbox" name="chkedu[]" value="PG Diploma"/> 
+PG Diploma
+<input type="checkbox" name="chkedu[]" value="UnderGraduate"> 
+UnderGraduate
+</td>
+</tr>
+<tr>
+<td nowrap> Graduation Date </td>
+<td> 
+<select name="selm">
+<script>
+for(i=1;i<12;i++)
+{
+ document.write ("<option>" + i + "</option>");
+}
+</script>
+</select> 
+/
+<select name="sely">
+<script>
+for(i=2017;i>1945;i--)
+{
+ document.write ("<option>" + i + "</option>");
+}
+</script>
+</select> 
+</td>
+</tr>
+
+
+<tr>
+<td nowrap> Date of Birth </td>
+<td> <input type="Date" name="dtdob"  /> 
+</td>
+</tr>
+<tr>
+<td> Profile </td>
+<td> <input type="file" name="fprofile"  /> 
+</td>
+</tr>
+<tr>
+<td> Country </td>
+<td>
+<select name="selcountry">
+<option> India </option> 
+<option> Japan </option> 
+<option selected> Sweden </option> 
+<option> Korea </option> 
+</select>
+</td>
+</tr>
+ <tr>
+<td> Hobbies </td>
+<td>
+<select name="selhobbies[]" multiple>
+<option> Cooking </option> 
+<option> Singing </option> 
+<option selected> Watching Cricket </option> 
+<option> Travelling </option> 
+<option> Teaching </option> 
+</select>
+ 
+</td>
+</tr>
+<tr>
+<td align="right"> <input type="submit" value="Register"/> </td>
+<td align="left"> <input type="reset" value="Clear"/> </td>
+</tr>
+</table>
+</form>
+</body>
+
+</html>

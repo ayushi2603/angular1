@@ -1,0 +1,31 @@
+<html>
+<head></head>
+<body>
+<script>
+var cars=["BMW","VOLVO","MERCEDEZ","TOYOTA"]
+document.write("<u><h1>cars list</h1></u>")
+cars.push("SUZUKI")
+var uc=cars.unshift("MARUTI")
+document.write(uc,"<hr/>")
+cars[3]="RENAULT"
+cars.sort()
+for(car of cars)
+{
+document.write(car,"<hr/>");
+}
+cars.splice(4,0,"MARUTI")
+for(car of cars)
+{
+document.write("new-list",car+"<hr/>");
+}
+var month=["jan","feb","march","april","may","june","july","aug","sept","oct","nov","dec"]
+for(i=0;i<month.length;i++)
+{
+document.write(month[i]+"<br/>");
+}
+
+
+
+</script>
+</body>
+</html>

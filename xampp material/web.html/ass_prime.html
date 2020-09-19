@@ -1,0 +1,49 @@
+<html>
+<head></head>
+<body>
+<script>
+var n=(prompt());
+var notAPrime= false;
+if(n===1)
+{
+document.write("number is not prime;");
+}
+else if(n===2)
+{
+document.write("number is prime;");
+}
+else{
+for(var i=1;i<=100;i++)
+{
+for(var x=2; x<=n/2; x++)
+{
+if(n%x===0)
+{
+
+notAPrime = true;
+break;
+}
+}
+if(notAPrime){
+document.write("number is  not prime;");
+
+}else{
+document.write("number is  prime;");
+
+}
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

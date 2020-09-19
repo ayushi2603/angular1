@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<style>
+			.headerClass{
+				background-color:blue;
+				border:solid;
+				border-color:black;
+				color:white;
+				font-style:italic;
+				font-size:25px;
+				padding: 10px;
+				margin-left: 250px;
+				margin-right:250px;
+				margin-top: 100px;
+			}
+			
+			.masterContainer{
+				background-color:aqua;
+				border:solid;
+				border-color:black;
+				border-radius:5px;
+				height:400px;
+				margin-left:250px;
+				margin-right:250px;
+				
+			}
+			.elementStyling{
+				margin-left:260px;
+				border:solid;
+				border-color:black;
+				background-color:LightGray;
+				color:white;
+				margin-top:30px;
+				border-radius:5px;
+				height:30px;
+			}
+		</style>
+	</head>
+
+	<body>
+	<form name="Login" action="success.html">
+		<div>
+			<div class="headerClass">
+				Login Form
+			</div>
+			
+			<div class="masterContainer">
+					<input   class="elementStyling" type="text" 
+					   name= "user name" placeholder="Enter Username"/>
+				
+					<input  class="elementStyling" type="password" 
+					   name= "password" placeholder="Enter User Password"/>
+					   
+					<div>
+						<span>
+							<input class="elementStyling" style="background-color:blue" type="Submit"
+								  Value="Login">
+								
+							</button>
+						</span>
+						<span>
+						<button class="elementStyling" style="background-color:blue" type="reset">
+							Cancel
+						</button>
+						</span>
+					</div>
+					
+			</div>
+		</div>
+		</form>
+	</body>
+</html>

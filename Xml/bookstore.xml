@@ -1,0 +1,39 @@
+<!DOCTYPE bookstore [
+<!ELEMENT bookstore (book*)>
+<!ELEMENT book (title,author,price,year,(publisher?|company))>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ATTLIST book lang CDATA #REQUIRED>
+<!ATTLIST book lang CDATA #REQUIRED>
+<!ATTLIST book category CDATA #IMPLIED>
+<!ATTLIST book inStock CDATA #FIXED "Y">
+<!--<!ENTITY Address “Vervet Logic Times”>-->
+]>
+<bookstore>
+    <book lang="gr" inStock="Y">
+        <title> Angels &amp; Demons </title>
+        <author> Dan Brown </author>
+        <price> $100 </price>
+        <year> 2005 </year>
+      <publisher> Tata Macgraw Hills </publisher>
+    </book>
+    <book lang="en">
+        <title> Harry Potter </title>
+        <author> J K Rowling </author>
+        <price> $120 </price>
+        <year> 2002 </year>
+<company> adfdasfas </company>
+    </book>
+<book lang="hn">
+        <title> Harry Potter </title>
+        <author> J K Rowling </author>
+        <price> $120 </price>
+        <year> 2002 </year>
+<company> adfdasfas </company>
+    </book>
+
+</bookstore>

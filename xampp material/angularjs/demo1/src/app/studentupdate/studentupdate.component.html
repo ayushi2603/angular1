@@ -1,0 +1,48 @@
+<p>studentupdate works!</p>
+<div class="jumbotron">
+<div class="table table-bordered bg-dark text-danger">
+<form [formGroup]= "form" (ngsubmit) ="register()">
+    <div>
+        <label>Student name</label>
+        <input type="text" placeholder="enter the name" formControlName="student_name"/>
+        </div>
+        <div>
+            <label>Student email</label>
+        <input type="text" placeholder="enter the email" formControlName="student_email"/>
+        </div>
+        <div>
+            <label>Student age</label>
+        <input type="text" placeholder="enter the age" formControlName="student_age"/>
+        </div>
+        <div>
+            <label>are you graduate</label>
+        <input type="checkbox"  formControlName="student_isGraduate"/>
+        </div>
+        <div><label>Student branch</label>
+        <select formControlName="student_branch">
+            <option *ngFor="let b of graduation_stream" [value]="b">
+                {{b}}
+            </option>
+        </select>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success">register</button> &nbsp;&nbsp;
+        <button type="reset" class="btn btn-danger">clear</button> 
+
+    </div>
+</form>
+</div>
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Student name</th>
+            <th>Student email</th>
+            <th>Student age</th>
+            <th>Student graduate</th>
+            <th>Student branch</th>
+        </tr>
+    </thead>
+</table>
+
+
+</div>
